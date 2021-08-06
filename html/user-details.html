@@ -17,10 +17,11 @@
 <script>
 
 // const params = new URLSearchParams(location.search);
-const params = (new URL(location)).searchParams;
-document.write(params);
+const params = (new URL(location)).searchParams;   // отримуємо всі квері параметри
+const userString = params.get('user');             // дістаємо потрібну за ключем
+const user = JSON.parse(userString);               // робимо parse бо в попередньому файлі зробили їх стрічкою (stringify)
 
-
+console.log(user)
 </script>
 
 </body>
